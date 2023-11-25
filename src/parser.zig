@@ -60,7 +60,7 @@ const Parser = struct {
             children.deinit();
         }
 
-        var node = try self.allocator.create(dtb.Node);
+        const node = try self.allocator.create(dtb.Node);
         errdefer self.allocator.destroy(node);
 
         while (true) {
